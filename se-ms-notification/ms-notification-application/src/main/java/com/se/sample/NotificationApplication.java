@@ -2,9 +2,6 @@ package com.se.sample;
 
 //import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.se.sample.data.api.client.DataClient;
-import com.se.sample.data.api.client.DataClientV1;
-import com.se.sample.data.rest.dto.NoteResponse;
 import com.se.sample.service.DataService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

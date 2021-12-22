@@ -11,8 +11,8 @@
 
     <parent>
         <groupId>com.se.sample</groupId>
-        <artifactId>ms-parent</artifactId>
-        <version>0.0.6</version>
+        <artifactId>se-ms-parent</artifactId>
+        <version>0.0.1</version>
         <relativePath/>
     </parent>
 
@@ -35,7 +35,7 @@
         <dependency>
             <groupId>com.se.sample</groupId>
             <artifactId>ms-data-api</artifactId>
-            <version>0.0.3</version>
+            <version>0.0.1</version>
         </dependency>
 
         <dependency>
