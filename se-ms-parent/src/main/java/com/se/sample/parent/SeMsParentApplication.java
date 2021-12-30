@@ -1,16 +1,17 @@
 package com.se.sample.parent;
 
-import com.se.sample.parent.config.ConfigProperties;
+import com.se.sample.parent.config.ServiceProperties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
-@EnableConfigurationProperties(ConfigProperties.class)
-@SpringBootApplication
+
+//@SpringBootApplication
+//@EnableConfigurationProperties({ServiceProperties.class})
 public class SeMsParentApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(SeMsParentApplication.class, args);
-    }
+//    public static void main(String[] args) {
+//        SpringApplication.run(SeMsParentApplication.class, args);
+//    }
 
 }
