@@ -16,7 +16,7 @@
     <parent>
         <groupId>com.se.sample</groupId>
         <artifactId>se-ms-parent</artifactId>
-        <version>0.0.2</version>
+        <version>0.0.1</version>
         <relativePath/>
     </parent>
 
@@ -34,6 +34,12 @@
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>com.se.sample</groupId>
+            <artifactId>se-ms-common</artifactId>
+            <version>0.0.1</version>
+        </dependency>
         <!-- spring dependency -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -57,12 +63,12 @@
         </dependency>
 
         <!-- 3rd party dependency -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${version.lombok}</version>
-            <optional>true</optional>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.projectlombok</groupId>-->
+<!--            <artifactId>lombok</artifactId>-->
+<!--            <version>${version.lombok}</version>-->
+<!--            <optional>true</optional>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>org.mapstruct</groupId>
