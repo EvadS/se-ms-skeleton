@@ -3,21 +3,20 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    <modelVersion>4.0.0</modelVersion>
-    <artifactId>ms-data-application</artifactId>
-
     <parent>
-        <groupId>com.se.sample</groupId>
         <artifactId>se-ms-data</artifactId>
-        <version>0.0.1</version>
+        <groupId>com.se.sample</groupId>
+        <version>0.0.3</version>
     </parent>
 
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>ms-data-application</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>com.se.sample</groupId>
             <artifactId>ms-data-api</artifactId>
-            <version>${parent.version}</version>
+            <version>${project.parent.version}</version>
         </dependency>
     </dependencies>
 </project>

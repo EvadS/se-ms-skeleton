@@ -24,13 +24,11 @@
   </properties>
 
   <dependencies>
-
     <dependency>
       <groupId>com.se.sample</groupId>
       <artifactId>ms-notification-api</artifactId>
       <version>0.0.1</version>
     </dependency>
-
   </dependencies>
 
 </project>

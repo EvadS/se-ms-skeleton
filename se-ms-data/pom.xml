@@ -5,14 +5,14 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.se.sample</groupId>
     <artifactId>se-ms-data</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.3</version>
     <packaging>pom</packaging>
 
     <modules>
         <module>ms-data-api</module>
         <module>ms-data-application</module>
     </modules>
-    <name>Data Microservice</name>
+
     <parent>
         <groupId>com.se.sample</groupId>
         <artifactId>se-ms-parent</artifactId>
@@ -20,6 +20,7 @@
         <relativePath/>
     </parent>
 
+    <name>Data Microservice</name>
     <description>Data Microservice</description>
 
     <properties>
@@ -98,9 +99,40 @@
 
     <build>
         <plugins>
+
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-jar-plugin</artifactId>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <phase>package</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>jar</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <skipIfEmpty>true</skipIfEmpty>-->
+<!--                            <classifier>api</classifier>-->
+<!--                            <includes>-->
+<!--                                <include>/spring.factories</include>-->
+<!--                                <include>/api/</include>-->
+<!--                                <include>/dto/</include>-->
+<!--                                <include>/event/</include>-->
+<!--                                <include>/constants/**</include>-->
+<!--                            </includes>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
+
+<!--            <plugin>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--            </plugin>-->
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
+                <version>3.0.2</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -108,15 +140,14 @@
                             <goal>jar</goal>
                         </goals>
                         <configuration>
-                            <skipIfEmpty>true</skipIfEmpty>
                             <classifier>api</classifier>
                             <includes>
-                                <include>/spring.factories</include>
-                                <include>/api/</include>
-                                <include>/dto/</include>
-                                <include>/event/</include>
-                                <include>/constants/**</include>
+                                <include>**/api/**</include>
+                                <include>**/dto/**</include>
+                                <include>**/message/**</include>
+                                <include>**/spring.factories</include>
                             </includes>
+                            <skipIfEmpty>true</skipIfEmpty>
                         </configuration>
                     </execution>
                 </executions>
@@ -147,6 +178,21 @@
                         </path>
                     </annotationProcessorPaths>
                 </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                        <configuration>
+                            <attach>false</attach>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
