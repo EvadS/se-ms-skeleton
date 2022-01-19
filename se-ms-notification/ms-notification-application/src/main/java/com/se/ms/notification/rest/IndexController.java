@@ -1,4 +1,4 @@
-package com.se.sample.notification.rest;
+package com.se.ms.notification.rest;
 
 import com.se.ms.data.api.client.DataClient;
 import com.se.ms.data.rest.dto.NoteResponse;
@@ -18,10 +18,9 @@ public class IndexController {
 
     private final DataClient dataClient;
 
-    @GetMapping("/")
+    @GetMapping("/test")
     public NoteResponse test() {
         log.info("Handle test API");
-//        return dataService.test();
-    return  null;
-    }
+        return dataClient.getNoteById(1l);
+       }
 }

@@ -1,4 +1,4 @@
-package com.se.sample.notification.model;
+package com.se.ms.notification.model;
 
 
 //@ResponseStatus(value = HttpStatus.NOT_FOUND)

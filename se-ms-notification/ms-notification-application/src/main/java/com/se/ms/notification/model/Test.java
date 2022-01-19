@@ -1,4 +1,4 @@
-package com.se.sample.notification.model;
+package com.se.ms.notification.model;
 
 import lombok.NoArgsConstructor;
 

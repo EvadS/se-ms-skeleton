@@ -1,4 +1,4 @@
-package com.se.sample.notification.client;
+package com.se.ms.notification.client;
 
 
 //@Slf4j

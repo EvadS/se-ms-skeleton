@@ -1,4 +1,4 @@
-package com.se.sample.notification.config;
+package com.se.ms.notification.config;
 
 
 //@Configuration
