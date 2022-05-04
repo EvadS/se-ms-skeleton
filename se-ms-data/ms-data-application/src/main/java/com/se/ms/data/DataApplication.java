@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@SpringBootApplication(scanBasePackages = {"com.se.sample.common", "com.se.ms.data"})
+@SpringBootApplication(scanBasePackages = {"com.se.sample.common",
+        "com.se.ms.data"})
 @EnableConfigurationProperties({ServiceProperties.class})
 public class DataApplication {
 

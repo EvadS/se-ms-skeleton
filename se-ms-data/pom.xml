@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.se.sample</groupId>
     <artifactId>se-ms-data</artifactId>
-    <version>0.0.3</version>
+    <version>0.0.4</version>
     <packaging>pom</packaging>
 
     <modules>
@@ -39,7 +39,7 @@
         <dependency>
             <groupId>com.se.sample</groupId>
             <artifactId>se-ms-common</artifactId>
-            <version>0.0.1</version>
+            <version>0.0.2</version>
         </dependency>
         <!-- spring dependency -->
         <dependency>
@@ -62,14 +62,6 @@
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
         </dependency>
-
-        <!-- 3rd party dependency -->
-<!--        <dependency>-->
-<!--            <groupId>org.projectlombok</groupId>-->
-<!--            <artifactId>lombok</artifactId>-->
-<!--            <version>${version.lombok}</version>-->
-<!--            <optional>true</optional>-->
-<!--        </dependency>-->
 
         <dependency>
             <groupId>org.mapstruct</groupId>
@@ -99,59 +91,6 @@
 
     <build>
         <plugins>
-
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-jar-plugin</artifactId>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <phase>package</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>jar</goal>-->
-<!--                        </goals>-->
-<!--                        <configuration>-->
-<!--                            <skipIfEmpty>true</skipIfEmpty>-->
-<!--                            <classifier>api</classifier>-->
-<!--                            <includes>-->
-<!--                                <include>/spring.factories</include>-->
-<!--                                <include>/api/</include>-->
-<!--                                <include>/dto/</include>-->
-<!--                                <include>/event/</include>-->
-<!--                                <include>/constants/**</include>-->
-<!--                            </includes>-->
-<!--                        </configuration>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
-
-<!--            <plugin>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
-<!--            </plugin>-->
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.0.2</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                        <configuration>
-                            <classifier>api</classifier>
-                            <includes>
-                                <include>**/api/**</include>
-                                <include>**/dto/**</include>
-                                <include>**/message/**</include>
-                                <include>**/spring.factories</include>
-                            </includes>
-                            <skipIfEmpty>true</skipIfEmpty>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -183,17 +122,8 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                        <configuration>
-                            <attach>false</attach>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
+
         </plugins>
     </build>
 </project>

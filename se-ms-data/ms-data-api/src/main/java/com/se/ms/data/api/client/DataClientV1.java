@@ -8,7 +8,6 @@ import org.springframework.web.client.RestTemplate;
 
 @Slf4j
 @RequiredArgsConstructor
-
 public class DataClientV1 implements  DataClient{
 
     private final String baseUrl;
