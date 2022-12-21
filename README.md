@@ -1,4 +1,4 @@
-# se-ms-skeleton
+# Api-implementation services structures
 
 ## build order
  * ms-parent
